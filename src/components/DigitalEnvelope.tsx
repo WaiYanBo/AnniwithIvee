@@ -92,31 +92,23 @@ export default function DigitalEnvelope() {
                     </p>
 
                     <p>
-                      As I write this, I find myself thinking back to that September evening when you first said those three words that would reshape my entire world. I remember the way the light caught your eyes, the nervous tremor in your voice, and the overwhelming rush of joy that brought tears to my eyes — tears that I never knew could feel so sweet.
+                      I still remember that September evening so clearly. I didn't just hear you say "I love you"; I felt it. For a guy who usually looks for logic in everything, that was the one moment where no algorithm was needed. Seeing you then, with that nervous smile, is still my favorite memory. Even the tears that followed were the happiest I’ve ever shed.
                     </p>
 
                     <p>
-                      Since that day, we have walked an incredible journey together. From the halls of AIU&apos;s Foundation Centre to the grand stage of our graduation, you have been my constant source of inspiration. Watching you earn your BBA in Marketing while I pursued my BCS, I&apos;ve seen you transform from the girl who captured my heart into the remarkable woman who continues to amaze me every single day.
+                      We’ve grown so much since those early days at the AIU Foundation Centre. Watching you navigate your Marketing degree while I tackled Computer Science has been such a journey. You’ve always been the one who understands people and emotions, while I’m busy trying to make things work behind the scenes. It’s funny how we’re so different, yet we fit together perfectly.
                     </p>
 
                     <p>
-                      Our adventures — wandering through Thailand&apos;s vibrant night markets, sharing plates of Nan Gyi Thoke that remind us of home, strolling along Singapore&apos;s Marina Bay under a canopy of stars — these are the moments that have painted our love story in the most beautiful colors.
+                      I think about our "Flavor & Sound" moments—sharing bowls of Malatang and debating the spice levels, or the way you look when we're wandering through night markets in Thailand or walking along Marina Bay. You have this way of making the simplest things feel like a huge adventure. 
                     </p>
 
                     <p>
-                      You see, you have this extraordinary way of making ordinary moments feel magical. Whether we&apos;re sharing a simple meal or exploring a new city, your presence turns every experience into a cherished memory. Your laughter is my favorite melody, your smile my favorite sight, and your love my greatest blessing.
-                    </p>
-
-                    <p>
-                      They say computer scientists think in algorithms and logic, but when it comes to you, all my calculations fall apart. There is no formula that can explain why my heart races when you enter a room, no code that can capture the depth of what I feel for you. You are the beautiful exception to every rule I thought I knew.
-                    </p>
-
-                    <p>
-                      So here&apos;s to us — to the girl who graduated in Marketing and stole this Computer Scientist&apos;s heart. To the adventures we&apos;ve had and the countless more awaiting us. To the songs I&apos;ll keep strumming on my Yamaha F310, each one carrying a piece of my love for you.
+                      Whether I'm strumming something for you on my Yamaha F310 or we're just sitting in silence, I’m constantly reminded of how lucky I am. They say I’m the one who builds the systems, but you’re the one who gives them a purpose.
                     </p>
 
                     <p className="italic">
-                      Thank you for saying &ldquo;I love you&rdquo; on that magical September day. Thank you for being my partner in this beautiful journey. And thank you for continuing to choose me, every single day.
+                      Thank you for choosing me every single day since 2022. I can't wait to see what the next "version" of our lives looks like together.
                     </p>
 
                     <p>

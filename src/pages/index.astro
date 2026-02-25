@@ -1,10 +1,12 @@
 ---
+//
 import '../styles/global.css';
 import HeroSection from '../components/HeroSection';
 import AcademicMilestone from '../components/AcademicMilestone';
 import TravelLog from '../components/TravelLog';
 import FlavorsAndSound from '../components/FlavorsAndSound';
 import DigitalEnvelope from '../components/DigitalEnvelope';
+import PhotoGallery from '../components/PhotoGallery';
 import Footer from '../components/Footer';
 ---
 
@@ -19,11 +21,12 @@ import Footer from '../components/Footer';
 		<meta name="description" content="A special anniversary website for Ivee, celebrating our love story since September 25, 2022" />
 	</head>
 	<body>
-		<HeroSection />
-		<AcademicMilestone />
-		<TravelLog />
-		<FlavorsAndSound />
-		<DigitalEnvelope />
+		<HeroSection client:load />
+		<AcademicMilestone client:load />
+		<TravelLog client:load />
+		<FlavorsAndSound client:load />
+		<DigitalEnvelope client:load />
+		<PhotoGallery client:load />
 		<Footer />
 	</body>
 </html>

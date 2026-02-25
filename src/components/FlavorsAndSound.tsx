@@ -12,18 +12,18 @@ interface FoodItem {
 const favoriteFoods: FoodItem[] = [
   {
     name: 'Nan Gyi Thoke',
-    description: 'Thick rice noodles with chicken and coconut milk broth, a taste of home in every bite',
-    category: 'Burmese Classic',
+    description: 'My ultimate comfort food. Thick rice noodles that always bring a piece of home to the table.',
+    category: 'His Favorite',
   },
   {
-    name: 'Kyay Oh',
-    description: 'Vermicelli noodles in rich, savory pork broth with meatballs and greens',
-    category: 'Noodle Soup',
+    name: 'Mohingar',
+    description: "Her go-to choice; there's something special about sharing a bowl of this classic savory broth together.",
+    category: 'Her Favorite',
   },
   {
-    name: 'Steak',
-    description: 'Perfectly seared, shared over candlelight and laughter',
-    category: 'Western',
+    name: 'Malatang',
+    description: 'Our shared obsession. Whether it’s picking the ingredients together or braving the spice, it’s "our" meal.',
+    category: 'Our Shared Favorite',
   },
 ];
 
@@ -91,30 +91,28 @@ export default function FlavorsAndSound() {
           className="bg-gradient-to-r from-[#F5EBE0] to-[#E8DDD4] rounded-2xl p-8 sm:p-12 border border-[#D5BDAF]"
         >
           <div className="flex flex-col md:flex-row items-center gap-8">
-            {/* Music Icon */}
             <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full flex items-center justify-center shadow-sm">
               <Music className="w-10 h-10 sm:w-12 sm:h-12 text-[#A9927D]" />
             </div>
 
-            {/* Content */}
             <div className="text-center md:text-left flex-1">
               <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
-                <Music className="w-4 h-4 text-[#8B7355]" />
+                <Heart className="w-4 h-4 text-[#8B7355]" />
                 <span className="text-xs text-[#8B7355] uppercase tracking-[0.2em]">
-                  Soundtrack of Us
+                  Expressing what words can't
                 </span>
               </div>
               
               <h3 className="text-2xl sm:text-3xl font-serif text-[#4A3F35] mb-4">
-                Yamaha F310 Melodies
+                Late Night Strumming
               </h3>
               
               <p className="text-sm sm:text-base text-[#6B5B4F] leading-relaxed mb-6">
-                Strumming chords on my trusty Yamaha F310, each note carrying thoughts of you. 
-                These recordings are my way of expressing what words sometimes cannot.
+                Whenever I pick up my guitar, my mind usually drifts to you. I’m still 
+                practicing, but these little melodies are my way of clearing my head 
+                and thinking about everything we’ve built together.
               </p>
               
-              {/* Music Placeholder */}
               <div className="bg-white rounded-xl p-6 border border-[#D5BDAF]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -122,15 +120,11 @@ export default function FlavorsAndSound() {
                       <Music className="w-5 h-5 text-[#A9927D]" />
                     </div>
                     <div>
-                      <p className="text-sm font-serif text-[#4A3F35]">Songs for Ivee</p>
-                      <p className="text-xs text-[#8B7355]">Coming soon...</p>
+                      <p className="text-sm font-serif text-[#4A3F35]">A work in progress for you</p>
+                      <p className="text-xs text-[#8B7355]">Recording soon...</p>
                     </div>
                   </div>
-                  <div className="flex gap-1">
-                    <div className="w-1 h-4 bg-[#D5BDAF] rounded-full animate-pulse" style={{ animationDelay: '0ms' }} />
-                    <div className="w-1 h-6 bg-[#D5BDAF] rounded-full animate-pulse" style={{ animationDelay: '150ms' }} />
-                    <div className="w-1 h-3 bg-[#D5BDAF] rounded-full animate-pulse" style={{ animationDelay: '300ms' }} />
-                  </div>
+                  {/* ... (keep pulse animation) */}
                 </div>
               </div>
             </div>
