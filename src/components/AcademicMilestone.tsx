@@ -51,58 +51,49 @@ export default function AcademicMilestone() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-[#D5BDAF] via-[#A9927D] to-[#D5BDAF]" />
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-px h-full bg-gradient-to-b from-[#D5BDAF] via-[#A9927D] to-[#D5BDAF]" />
 
-          {/* Milestones */}
-          <div className="space-y-16">
+          <div className="space-y-12">
             {milestones.map((milestone, index) => (
               <motion.div
                 key={milestone.date}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                className={`relative flex flex-col md:flex-row items-start md:items-center ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
-                {/* Content Card */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <div
-                    className={`p-6 rounded-xl bg-white shadow-sm border transition-all duration-300 hover:shadow-md ${
-                      milestone.isHighlighted
-                        ? 'border-[#A9927D] bg-gradient-to-br from-white to-[#F5EBE0]'
-                        : 'border-[#D5BDAF]'
-                    }`}
-                  >
-                    <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                      <Calendar className="w-4 h-4 text-[#A9927D]" />
-                      <span className="text-sm text-[#8B7355] font-sans">{milestone.date}</span>
+                {/* Content Card - Width mathematically calculated to never overflow */}
+                <div className="w-[calc(100%-3.5rem)] ml-14 md:w-5/12 md:ml-0">
+                  <div className={`p-5 sm:p-6 rounded-xl bg-white shadow-sm border border-[#D5BDAF] transition-all duration-300 hover:shadow-md ${
+                    milestone.isHighlighted ? 'bg-gradient-to-br from-white to-[#F5EBE0] border-[#A9927D]' : ''
+                  }`}>
+                    <div className="flex items-center gap-2 mb-2 text-[#8B7355]">
+                      <Calendar className="w-4 h-4" />
+                      <span className="text-xs sm:text-sm font-sans">{milestone.date}</span>
                     </div>
                     
-                    <h3 className="text-xl sm:text-2xl font-serif text-[#4A3F35] mb-2">
+                    <h3 className="text-lg sm:text-xl font-serif text-[#4A3F35] mb-2 leading-tight">
                       {milestone.title}
                     </h3>
                     
-                    <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                      <MapPin className="w-4 h-4 text-[#D5BDAF]" />
-                      <span className="text-sm text-[#6B5B4F]">{milestone.location}</span>
+                    <div className="flex items-start gap-2 mb-1 text-[#6B5B4F]">
+                      <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{milestone.location}</span>
                     </div>
                     
                     {milestone.degree && (
-                      <div className={`flex items-center gap-2 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                        <GraduationCap className="w-4 h-4 text-[#A9927D]" />
-                        <span className="text-sm text-[#6B5B4F] italic">{milestone.degree}</span>
+                      <div className="flex items-start gap-2 text-[#6B5B4F] italic">
+                        <GraduationCap className="w-4 h-4 mt-1 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm">{milestone.degree}</span>
                       </div>
                     )}
                   </div>
                 </div>
 
                 {/* Center dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#A9927D] border-4 border-[#F5EBE0] z-10" />
+                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-[#A9927D] border-4 border-[#F5EBE0] z-10" />
 
-                {/* Empty space for other side */}
-                <div className="w-5/12" />
+                {/* Empty space block for desktop to keep the layout balanced */}
+                <div className="hidden md:block md:w-5/12" />
               </motion.div>
             ))}
           </div>

@@ -3,10 +3,49 @@
 import { motion } from 'framer-motion';
 import { Heart, Code, TrendingUp } from 'lucide-react';
 
+// Hardcoded to prevent ANY React crashes or blank screens
+const CATS = [
+  { id: 1, left: "5%", delay: 0, duration: 15 },
+  { id: 2, left: "15%", delay: 2, duration: 18 },
+  { id: 3, left: "25%", delay: 5, duration: 12 },
+  { id: 4, left: "35%", delay: 1, duration: 20 },
+  { id: 5, left: "45%", delay: 3, duration: 16 },
+  { id: 6, left: "55%", delay: 0, duration: 22 },
+  { id: 7, left: "65%", delay: 4, duration: 14 },
+  { id: 8, left: "75%", delay: 2, duration: 19 },
+  { id: 9, left: "85%", delay: 6, duration: 17 },
+  { id: 10, left: "95%", delay: 1, duration: 21 },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-[#4A3F35] text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <footer className="bg-[#4A3F35] text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      
+      {/* 🐈 BACKGROUND CATS - Safely animated behind the text 🐈 */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+        {CATS.map((cat) => (
+          <motion.div
+            key={cat.id}
+            className="absolute text-3xl"
+            style={{ left: cat.left, top: "100%" }}
+            animate={{ 
+              y: -1000, 
+              rotate: 360 
+            }}
+            transition={{
+              duration: cat.duration,
+              delay: cat.delay,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            🐈
+          </motion.div>
+        ))}
+      </div>
+
+      {/* MAIN TEXT CONTENT - Kept exactly as you wrote it */}
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
